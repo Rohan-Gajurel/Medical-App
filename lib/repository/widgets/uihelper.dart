@@ -10,6 +10,7 @@ class Uihelper {
     return Image.asset("assets/images/$imageName", width: width, height: height,);
   }
 
+  // ignore: strict_top_level_inference
   static customText({
     required String text,
     required double size,
