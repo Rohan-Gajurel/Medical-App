@@ -24,7 +24,7 @@ class Uihelper {
         fontSize: size,
         color: color,
         fontWeight: fontweight,
-        fontFamily: fontFamily,
+        fontFamily: fontFamily??"League Spartan",
       ),
     );
   }

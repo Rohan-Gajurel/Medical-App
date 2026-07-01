@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medical_health_app/repository/screen/doctors/doctorscreen.dart';
 import 'package:medical_health_app/repository/widgets/uihelper.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -74,22 +75,25 @@ class HomeScreen extends StatelessWidget {
                   SizedBox(height: 30),
                   Row(
                     children: [
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Uihelper.customImage(
-                            "stethoscope.png",
-                            width: 15,
-                            height: 18,
-                          ),
-                          Uihelper.customText(
-                            text: "Doctors",
-                            size: 14,
-                            color: Color(0xFF2260FF),
-                            fontweight: FontWeight.w300,
-                            fontFamily: "League Spartan",
-                          ),
-                        ],
+                      GestureDetector(
+                        onTap:() => Navigator.push(context, MaterialPageRoute(builder: (context)=>DoctorsScreen())),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Uihelper.customImage(
+                              "stethoscope.png",
+                              width: 15,
+                              height: 18,
+                            ),
+                            Uihelper.customText(
+                              text: "Doctors",
+                              size: 14,
+                              color: Color(0xFF2260FF),
+                              fontweight: FontWeight.w300,
+                              fontFamily: "League Spartan",
+                            ),
+                          ],
+                        ),
                       ),
                       SizedBox(width: 10),
                       Column(
